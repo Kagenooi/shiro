@@ -1,0 +1,108 @@
+.footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1070;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 45px 105px;
+
+    @media (max-width: 1280px) {
+        padding: 35px;
+    }
+
+    @media (max-width: 580px) {
+        flex-direction: column;
+        align-items: center;
+
+    }
+    &__content {
+        max-width: 385px;
+    }
+
+    &__pr {
+        font-size: 13px;
+        margin-top: 18px;
+
+        @media (max-width: 580px) {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 21px;
+        }
+    }
+
+    &__logo {
+        display: block;
+        margin-bottom: -12px;
+
+        @media (max-width: 580px) {
+            display: none;
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: center;
+        grid-gap: 37px;
+        position: relative;
+        z-index: 1010;
+
+        @media (max-width: 580px) {
+            margin-top: 11px;
+            grid-gap: 18px;
+        }
+        &_menu {
+            display: flex;
+            grid-gap: 37px;
+
+            @media (max-width: 580px) {
+                grid-gap: 18px;
+            }
+            &-link {
+                font-size: 18px;
+                font-weight: 400;
+                transition: .2s;
+
+                &:hover {
+                    transition: .2s;
+                    opacity: 0.5;
+                }
+            }
+        }
+
+        &_list {
+            display: flex;
+            grid-gap: 21px;
+
+            &_link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 8px;
+                border-radius: 50%;
+                width: 38px;
+                height: 38px;
+                background: #D9D9D91A;
+                transition: .2s;
+
+                @media (max-width: 580px) {
+                    padding: 7px;
+                    width: 32px;
+                    height: 32px;
+                }
+                &:hover {
+                    transition: .2s;
+                    background: #d9d9d936;
+                }
+
+                &-icon {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}

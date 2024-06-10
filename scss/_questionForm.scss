@@ -1,0 +1,118 @@
+.questionForm {
+    position: relative;
+    z-index: 1071;
+    padding: 50px 105px;
+    background: #fff;
+
+    @media (max-width: 1280px) {
+        padding: 50px;
+    }
+
+    @media (max-width: 980px) {
+        width: 100%;
+    }
+
+    @media (max-width: 580px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border-radius: 25px;
+        width: 100%;
+        max-width: 355px;
+        height: min-content;
+        z-index: 1099;
+        padding: 32px 20px;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__closeBtn {
+        display: none;
+
+        @media (max-width: 580px) {
+            display: block;
+            position: absolute;
+            top: -23px;
+            right: 0px;
+        }
+    }
+    &__title {
+        color: #292F89;
+        font-size: 27px;
+        line-height: 36.5px;
+        font-weight: 800;
+        text-align: center;
+        text-transform: uppercase;
+
+        @media (max-width: 1280px) {
+            font-size: 24px;
+        }
+
+        @media (max-width: 980px) {
+            grid-column: 1 / 3;
+        }
+
+        @media (max-width: 580px) {
+            grid-column: 1 / 2;
+            font-size: 19px;
+            line-height: 25px;
+        }
+    }
+
+    &__inp,
+    &__textarea {
+        width: 100%;
+        resize: none;
+        border-radius: 11px;
+        padding: 14px 30px;
+        background: #727EE926;
+        color: #000D2F80;
+        font-size: 19px;
+        line-height: 25px;
+
+        &::placeholder {
+            color: #000D2F45;
+            font-size: 19px;
+        }
+    }
+
+    &__textarea {
+        height: 138px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-gap: 30px;
+
+        @media (max-width: 980px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto 52px 52px auto;
+        }
+
+        @media (max-width: 580px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, auto);
+        }
+    }
+
+    &__submit {
+        border-radius: 30px;
+        background: #727EE9;
+        text-align: center;
+        font-size: 19px;
+        font-weight: 600;
+        padding: 15px;
+        transition: .2s;
+
+        &:hover {
+            transition: .2s;
+            background: #000D2F;
+        }
+    }
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/sample/sample.css">
+</head>
+<body>
+    
+    <div id="adaptive">
+
+        <nav class="navbar">
+            <div class="navbar__wrapper">
+                <a href="index.html" class="navbar__logo">
+                    <img src="images/navLogo.png" alt="logo" class="navbar__logo-pic">
+                </a>
+                <div class="navbar__content">
+                    <form action="">
+                        <div class="navbar__search">
+                            <input type="search" class="navbar__search-inp" placeholder="Search">
+                            <button type="button" class="navbar__search_btn">
+                                <img src="images/searchGlass.svg" alt="search magnifying glass" class="navbar__search_btn-icon">
+                            </button>
+                        </div>
+                    </form>
+                    <a href="" class="navbar__calc">
+                        <img src="images/wtf.svg" alt="wtf" class="navbar__calc-icon">
+                    </a>
+                    <div class="navbar__currency">
+                        <button type="button" class="navbar__currency_btn" onclick="currencyDropdown(this, '#currency')">
+                            <span class="navbar__currency_btn_txt">$ USD</span>
+                            <img src="images/arrow.svg" alt="" class="navbar__currency_btn_arrow">
+                        </button>
+                        <div class="navbar__currency_list" id="currency">
+                            <button type="button" class="navbar__currency_list_btn">֏ AMD</button>
+                            <button type="button" class="navbar__currency_list_btn">$ USD</button>
+                            <button type="button" class="navbar__currency_list_btn">₽ RUB</button>
+                        </div>
+                    </div>
+                    <div class="navbar__lang">
+                        <button type="button" id="lang" class="navbar__lang_btn" onclick="langDropdown('#lang', '#langDropdown')">
+                            <img src="images/usa.png" alt="country flag" class="navbar__lang_btn-flag">
+                            <span class="navbar__lang_btn-txt" id="selectLang">ENG</span>
+                            <img src="images/arrow.svg" alt="dropdown arrow" class="navbar__lang_btn-arrow">
+                        </button>
+                        <div id="langDropdown" class="navbar__lang_list">
+                            <a href="" class="navbar__lang_list_btn" id="defaultLang">
+                                <img src="images/arm.png" alt="country flag" class="navbar__lang_list_btn-flag">
+                                <span class="navbar__lang_list_btn-txt" id="selectLang">ARM</span>
+                            </a>
+                            <a href="" class="navbar__lang_list_btn">
+                                <img src="images/usa.png" alt="country flag" class="navbar__lang_list_btn-flag">
+                                <span class="navbar__lang_list_btn-txt" id="selectLang">USA</span>
+                            </a>
+                            <a href="" class="navbar__lang_list_btn">
+                                <img src="images/rus.png" alt="country flag" class="navbar__lang_list_btn-flag">
+                                <span class="navbar__lang_list_btn-txt" id="selectLang">RUS</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="navbar__menu">
+                        <button type="button" class="navbar__menu_btn" onclick="toggleMenu('.navbar__menu_list', this)">
+                            <span class="navbar__menu_btn-line-top"></span>
+                            <span class="navbar__menu_btn-line"></span>
+                            <span class="navbar__menu_btn-line-bottom"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar__menu_list right">
+                <ul class="menu">
+                    <li><a href="" class="menu__link toggleSubmenu" onclick="sumbenuToggle(this)" data-submenu="about">About Us</a></li>
+                    <li><a href="" class="menu__link toggleSubmenu" onclick="sumbenuToggle(this)" data-submenu="services">Services</a></li>
+                    <li><a href="" class="menu__link toggleSubmenu" onclick="sumbenuToggle(this)" data-submenu="regulations">Regulations</a></li>
+                    <li><a href="projects.html" class="menu__link">Projects</a></li>
+                    <li><a href="" class="menu__link toggleSubmenu" onclick="sumbenuToggle(this)" data-submenu="projects">Regulator</a></li>
+                    <li><a href="partners.html" class="menu__link">Partners</a></li>
+                    <li><a href="reports.html" class="menu__link">Reports</a></li>
+                    <li><a href="contact.html" class="menu__link">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="navbar__menu_list left">
+                <ul class="submenu" id="about">
+                    <li class="close">
+                        <button type="button" class="closeBtn" onclick="closeSubmenu('about')">
+                            <img src="images/arrow.svg" alt="" class="closeBtn__icon">
+                        </button>
+                    </li>
+                    <li class="title">About Us</li>
+                    <li><a href="about.html" class="submenu__link">About company</a></li>
+                    <li><a href="corporate.html" class="submenu__link">Corporate structure</a></li>
+                    <li><a href="mission.html" class="submenu__link">Mission</a></li>
+                    <li><a href="business.html" class="submenu__link">Our business principles</a></li>
+                    <li><a href="certificate.html" class="submenu__link">State registration certificate</a></li>
+                </ul>
+                <ul class="submenu" id="services">
+                    <li class="close">
+                        <button type="button" class="closeBtn" onclick="closeSubmenu('services')">
+                            <img src="images/arrow.svg" alt="" class="closeBtn__icon">
+                        </button>
+                    </li>
+                    <li class="title">Services</li>
+                    <li><a href="investment.html" class="submenu__link">Investment Securities Services</a></li>
+                    <li><a href="asset.html" class="submenu__link">Asset management</a></li>
+                    <li><a href="state.html" class="submenu__link">State registration</a></li>
+                </ul>
+                <ul class="submenu" id="regulations">
+                    <li class="close">
+                        <button type="button" class="closeBtn" onclick="closeSubmenu('regulations')">
+                            <img src="images/arrow.svg" alt="" class="closeBtn__icon">
+                        </button>
+                    </li>
+                    <li class="title">Regulations</li>
+                    <li><a href="legal.html" class="submenu__link">Legal acts </a></li>
+                    <li><a href="laws.html" class="submenu__link">Laws</a></li>
+                    <li><a href="client.html" class="submenu__link">Client rights</a></li>
+                </ul>
+                <ul class="submenu" id="projects">
+                    <li class="close">
+                        <button type="button" class="closeBtn" onclick="closeSubmenu('projects')">
+                            <img src="images/arrow.svg" alt="" class="closeBtn__icon">
+                        </button>
+                    </li>
+                    <li class="title">Regulator</li>
+                    <li><a href="external.html" class="submenu__link">External Regulation</a></li>
+                    <li><a href="internal.html" class="submenu__link">Internal Regulation</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+        <main>
+            <header class="header">
+                <h1 class="header__title">Mission</h1>
+            </header>
+    
+            <section class="sample">
+                <div class="sample__wrapper">
+                    <div class="sample__item">
+                        <h2 class="sample__item_title">Our mission</h2>
+                        <div class="sample__item_wrapper">
+                            <div class="sample__item_wrapper_el">
+                                <div class="sample__item_el mt-none">
+                                    <ul class="sample__item_el_list list-type-none">
+                                        <li class="bold">– Promote the development of entrepreneurship in Armenia;</li>
+                                        <li class="bold">– Promote the development of industries of strategic importance to the Armenian economy;</li>
+                                        <li class="bold">– Contribute to the balanced development of the regions of the Republic of Armenia.</li>
+                                    </ul>
+                                </div>
+                                <p class="sample__item_pr">Paying close attention to the principle of collegial decision-making, we emphasize the importance
+                                    to follow the instructions, ensuring effective control and strict accountability in the corporate
+                                    governance of the fund.</p>
+                                <p class="sample__item_pr">Thanks to our dedicated, hard-working and solid team we are achieving our goals and move towards
+                                    the realization of our vision.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    
+        <footer class="footer">
+            <div class="footer__content">
+                <a href="" class="footer__logo">
+                    <img src="images/footerLogo.png" alt="logo" class="footer__logo-pic">
+                </a>
+                <p class="footer__pr">Shiro Management is the manager of Shiro Closed Ended Non-Public Contractual Investment Fund.</p>
+                <p class="footer__pr">2023 "Shiro" closed non-public contractual investment fund</p>
+            </div>
+            <div class="footer__social">
+                <ul class="footer__social_menu">
+                    <!-- <li><a href="location.html" class="footer__social_menu-link">location</a></li> -->
+                    <li><a href="contact.html" class="footer__social_menu-link">Contact Us</a></li>
+                </ul>
+                <ul class="footer__social_list">
+                    <li>
+                        <a href="" class="footer__social_list_link">
+                            <img src="images/facebook.svg" alt="facebook" class="footer__social_list_link-icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="footer__social_list_link">
+                            <img src="images/instagram.svg" alt="instagram" class="footer__social_list_link-icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="footer__social_list_link">
+                            <img src="images/telegram.svg" alt="telegram" class="footer__social_list_link-icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <script type="module" src="js/sample.js"></script>
+</body>
+</html>

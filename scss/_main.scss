@@ -1,0 +1,52 @@
+@import '../font/fonts';
+@import '../adaptiveMode/adaptive';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.25;
+    font-size: 19px;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'Montserratarm';
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    appearance: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	-webkit-appearance:none;
+}
+button {
+    cursor: pointer;
+}
