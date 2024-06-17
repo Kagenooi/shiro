@@ -130,3 +130,8 @@ export function closeSubmenu(sub) {
         allLinks[i].classList.remove('active');
     }
 }
+
+
+export function questionForm() {
+    document.querySelector('#questionForm').classList.toggle('active');
+}

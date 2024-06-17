@@ -5,11 +5,13 @@ import {
     defaultLinks,
     currencyDropdown,
     closeSubmenu,
+    questionForm
 } from "./module.js";
 window.langDropdown = langDropdown;
 window.toggleMenu = toggleMenu;
 window.sumbenuToggle = sumbenuToggle;
 window.defaultLinks = defaultLinks;
+window.questionForm = questionForm;
 defaultLinks();
 window.currencyDropdown = currencyDropdown;
 window.closeSubmenu = closeSubmenu;

@@ -33,7 +33,14 @@
             z-index: 1090;
         }
     }
+    &.active &__currency_list_btn,
+    &.active &__lang_list_btn {
+        background: #3b4091;
 
+        &:hover {
+            background: #4e539a;
+        }
+    }
     &__logo {
         display: flex;
         align-items: center;

@@ -76,7 +76,7 @@
   font-size: 19px;
   font-weight: 400;
   color: #fff;
-  font-family: "Montserratarm";
+  font-family: "Montserratarm", sans-serif;
 }
 
 body {
@@ -267,6 +267,12 @@ button {
 }
 .navbar__wrapper * {
   z-index: 1090;
+}
+.navbar.active .navbar__currency_list_btn, .navbar.active .navbar__lang_list_btn {
+  background: #3b4091;
+}
+.navbar.active .navbar__currency_list_btn:hover, .navbar.active .navbar__lang_list_btn:hover {
+  background: #4e539a;
 }
 .navbar__logo {
   display: flex;
@@ -883,9 +889,6 @@ button {
   grid-gap: 8px;
   margin-bottom: 20px;
 }
-.sample__item_pr {
-  margin-bottom: 20px;
-}
 .sample__item_pic {
   width: 119px;
   border-radius: 8px;
@@ -909,17 +912,17 @@ button {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.sample__item_list {
+.sample__item_wrapper_el > ul {
   display: grid;
   grid-gap: 16px;
   margin-top: 35px;
 }
-.sample__item_list_el {
+.sample__item_wrapper_el > ul > li {
   display: flex;
   align-items: center;
   grid-gap: 16px;
 }
-.sample__item_list_el_icon {
+.sample__item_wrapper_el > ul > li > img {
   display: block;
   width: 28px;
   min-width: 28px;
@@ -946,16 +949,19 @@ button {
     padding: 24px 16px;
   }
 }
+.sample__item_wrapper_el > p {
+  margin-bottom: 20px;
+}
 .sample__item_wrapper * {
   color: rgba(0, 13, 47, 0.7490196078);
   font-size: 16px;
   line-height: 21.6px;
   font-weight: 400;
 }
-.sample__item_wrapper * .bold {
+.sample__item_wrapper * strong {
   font-weight: 600;
 }
-.sample__item_title {
+.sample__item > h2 {
   width: 855px;
   margin: 0 0 20px auto;
   color: #292F89;
@@ -969,15 +975,15 @@ button {
 .sample__item_el.mt-none {
   margin-top: 0;
 }
-.sample__item_el_list {
+.sample__item_el > ul {
   list-style: disc;
   padding-left: 16px;
 }
-.sample__item_el_list.list-type-none {
+.sample__item_el_listNone > ul {
   list-style: none;
   padding-left: 0;
 }
-.sample__item_el_title {
+.sample__item_el > h3 {
   font-weight: 600;
   margin-bottom: 18px;
 }

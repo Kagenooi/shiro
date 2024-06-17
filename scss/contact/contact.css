@@ -76,7 +76,7 @@
   font-size: 19px;
   font-weight: 400;
   color: #fff;
-  font-family: "Montserratarm";
+  font-family: "Montserratarm", sans-serif;
 }
 
 body {
@@ -267,6 +267,12 @@ button {
 }
 .navbar__wrapper * {
   z-index: 1090;
+}
+.navbar.active .navbar__currency_list_btn, .navbar.active .navbar__lang_list_btn {
+  background: #3b4091;
+}
+.navbar.active .navbar__currency_list_btn:hover, .navbar.active .navbar__lang_list_btn:hover {
+  background: #4e539a;
 }
 .navbar__logo {
   display: flex;
