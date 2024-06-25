@@ -983,7 +983,7 @@ button {
 }
 @media (max-width: 580px) {
   .header__title {
-    font-size: 41px;
+    font-size: 38px;
     line-height: 130%;
     text-align: left;
   }

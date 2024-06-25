@@ -31,3 +31,18 @@ window.addEventListener('scroll', function() {
         this.document.querySelector('.navbar').classList.remove('active');
     }
 })
+
+
+
+document.documentElement.addEventListener('click', function(event) {
+    if (!event.target.closest('.navbar__lang')) {
+        document.querySelector('#langDropdown').classList.remove('active');
+        document.querySelector('.navbar__lang_btn').classList.remove('active');
+        document.querySelector('#langDropdown').style.maxHeight = null;
+    }
+    if (!event.target.closest('.navbar__currency')) {
+        document.querySelector('#currency').classList.remove('active');
+        document.querySelector('.navbar__currency_btn').classList.remove('active');
+        document.querySelector('#currency').style.maxHeight = null;
+    }
+})

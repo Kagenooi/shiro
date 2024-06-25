@@ -54,10 +54,12 @@ document.documentElement.addEventListener('click', function(event) {
 })
 
 function title() {
-    if (document.querySelector('.header__title').clientWidth > 375) {
-        document.querySelector('.header__title').style.cssText = `
-            font-size: 24px;
-        `;
+    if (document.body.clientWidth < 520) {
+        if (document.querySelector('.header__title').clientWidth > 375) {
+            document.querySelector('.header__title').style.cssText = `
+                font-size: 22px;
+            `;
+        }
     }
 }
 title();
